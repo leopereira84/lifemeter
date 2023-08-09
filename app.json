@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "lifemeter",
+    "slug": "lifemeter",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
