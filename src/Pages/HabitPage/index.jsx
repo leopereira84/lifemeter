@@ -11,10 +11,12 @@ import {
   ScrollView,
   Alert,
 } from "react-native"
+import SelectFrequency from "../../Components/HabitPage/SelectFrequency";
 
 export default function HabitPage({ route }) {
   const navigation = useNavigation()
-  const [habitInput, setHabitInput] = useState()
+  const [habitInput, setHabitInput] = useState();
+  const [frequencyInput, setFrequencyInput] = useState();
   const { create, habit } = route.params
 
   return (
@@ -38,6 +40,8 @@ export default function HabitPage({ route }) {
             </View>
             <Text style={styles.inputText}>Hábito</Text>
             <SelectHabit habit={habit} habitInput={setHabitInput} />
+            <Text style={styles.inputText}>Frequência</Text>
+            <SelectFrequency habitFrequency={habit?.habitFrequency} frequencyInput={setFrequencyInput} />
           </View>
         </View>
       </ScrollView>
