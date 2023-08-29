@@ -1,6 +1,4 @@
-import { useNavigation } from "@react-navigation/native";
-import React, { useState, setHabitInput } from "react";
-import SelectHabit from "../../Components/HabitPage/SelectHabit";
+import React, { useEffect, useState, useRef, setHabitInput } from "react";
 
 import {
   View,
@@ -11,12 +9,19 @@ import {
   ScrollView,
   Alert,
 } from "react-native"
+
+import { useNavigation } from "@react-navigation/native";
+
+import SelectHabit from "../../Components/HabitPage/SelectHabit";
 import SelectFrequency from "../../Components/HabitPage/SelectFrequency";
+import Notification from "../../Components/HabitPage/Notification";
 
 export default function HabitPage({ route }) {
   const navigation = useNavigation()
   const [habitInput, setHabitInput] = useState();
   const [frequencyInput, setFrequencyInput] = useState();
+  const [notificationToggle, setNotificationToggle] = useState();
+
   const { create, habit } = route.params
 
   return (
@@ -42,6 +47,7 @@ export default function HabitPage({ route }) {
             <SelectHabit habit={habit} habitInput={setHabitInput} />
             <Text style={styles.inputText}>Frequência</Text>
             <SelectFrequency habitFrequency={habit?.habitFrequency} frequencyInput={setFrequencyInput} />
+            <Notification notificationToggle={notificationToggle} setNotificationToggle={setNotificationToggle} />
           </View>
         </View>
       </ScrollView>
