@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
   },
   dropdownStyle: {
     borderWidth: 0,
+    maxHeight: 100,
   },
   dropdownItemStyle: {
     borderWidth: 1,
