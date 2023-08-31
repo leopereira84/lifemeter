@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { SelectList } from "react-native-dropdown-select-list";
-import HabitsData from "../../Database/HabitsData";
+import HabitsData from "../../../Database/HabitsData";
 
 import { Image, StyleSheet } from "react-native";
 
