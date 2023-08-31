@@ -1,5 +1,5 @@
-import DateTimePicker from "@react-native-community/datetimepicker";
 import React, { useState } from "react";
+import DateTimePicker from "@react-native-community/datetimepicker";
 import { Image, Platform, StyleSheet, TouchableOpacity, View, Text } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
 
